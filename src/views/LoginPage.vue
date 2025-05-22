@@ -4,7 +4,7 @@
 <template>
     <div class="min-h-screen flex flex-col bg-stone-950"> 
         <div class="flex-1 flex items-center justify-center">
-            <div class="w-full max-w-sm lg:max-w-md mx-4 bg-gray-800/90 rounded-xl p-8">
+            <div class="w-full max-w-sm lg:max-w-md mx-4 bg-gray-800/90 rounded-xl p-8 shadow-2xl backdrop-blur-sm">
                 <div class="sm:mx-auto sm:w-full sm:max-w-sm">
                     <!-- Simple logo placeholder instead of missing Logo component -->
                     <div class="text-center mb-4">
