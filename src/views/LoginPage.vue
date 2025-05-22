@@ -54,7 +54,7 @@
 
                     <div class="mt-12 pt-8 border-t border-zinc-800">
                         <p class="text-center text-xs text-zinc-500 uppercase tracking-[0.1em]">
-                            No Account?{" "}
+                            No Account?
                             <router-link to="/register"
                                 class="text-white hover:text-zinc-300 transition-colors duration-200 ml-2">
                                 Register
