@@ -1,4 +1,4 @@
-# sadnews
+# frontend
 
 ## Project setup
 ```
