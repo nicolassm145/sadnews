@@ -7,28 +7,65 @@ const count = ref(0)
 </script>
 
 <template>
-    <div class="min-h-screen flex items-center justify-center bg-gray-100">
-        <div class="bg-white p-8 rounded shadow-md w-full max-w-md">
-            <h2 class="text-2xl font-bold mb-6 text-center">Login</h2>
-            <form @submit.prevent="login">
-                <div class="mb-4">
-                    <label class="block text-gray-700 mb-2" for="email">Email</label>
-                    <input v-model="email" id="email" type="email" required
-                        class="w-full px-3 py-2 border rounded focus:outline-none focus:ring focus:border-blue-300" />
+    <div className="min-h-screen flex flex-col bg-[url('/loginBG.jpg')] bg-cover bg-center">
+        <div className="flex-1 flex items-center justify-center">
+            <div className="w-full max-w-sm lg:max-w-md mx-4 bg-gray-800/90 rounded-xl p-8 shadow-2xl backdrop-blur-sm">
+                <div className="sm:mx-auto sm:w-full sm:max-w-sm">
+                    <Logo />
+                    <h2 className="mt-2 text-center text-2xl font-roboto-mono font-bold tracking-tight text-white">
+                        Sign in to your account
+                    </h2>
                 </div>
-                <div class="mb-6">
-                    <label class="block text-gray-700 mb-2" for="password">Password</label>
-                    <input v-model="password" id="password" type="password" required
-                        class="w-full px-3 py-2 border rounded focus:outline-none focus:ring focus:border-blue-300" />
+
+                <div className="mt-10">
+                    <form className="space-y-6">
+                        <div>
+                            <label htmlFor="email" className="block text-sm font-medium text-white font-roboto-mono">
+                                Email address
+                            </label>
+                            <div className="mt-2">
+                                <input id="email" name="email" type="email" required
+                                    className="w-full px-4 py-2 rounded-lg bg-gray-700/50 border border-gray-600 text-white placeholder-gray-400 font-roboto-mono"
+                                    autoComplete="email" />
+                            </div>
+                        </div>
+
+                        <div>
+                            <div className="flex items-center justify-between">
+                                <label htmlFor="password"
+                                    className="block text-sm font-medium text-white font-roboto-mono">
+                                    Password
+                                </label>
+                                <div className="text-sm">
+                                    <a href="#"
+                                        className="font-semibold text-indigo-400 hover:text-indigo-300 font-roboto-mono">
+                                        Forgot password?
+                                    </a>
+                                </div>
+                            </div>
+                            <div className="mt-2">
+                                <input id="password" name="password" type="password" required
+                                    className="w-full px-4 py-2 rounded-lg bg-gray-700/50 border border-gray-600 text-white placeholder-gray-400 font-roboto-mono"
+                                    autoComplete="current-password" />
+                            </div>
+                        </div>
+
+                        <div>
+                            <button type="submit"
+                                className="w-full flex justify-center py-2 px-4 rounded-lg bg-indigo-600 hover:bg-indigo-700 text-white font-semibold transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                                Sign in
+                            </button>
+                        </div>
+                    </form>
+
+                    <p className="mt-8 text-center text-sm text-gray-400 font-roboto-mono">
+                        Don&#x27;t have an account yet?{" "}
+                        <a href="/register" className="font-roboto-mono text-indigo-400 hover:text-indigo-300 ">
+                            Sign Up
+                        </a>
+                    </p>
                 </div>
-                <button type="submit" class="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition">
-                    Login
-                </button>
-            </form>
-            <p class="mt-4 text-center text-sm text-gray-600">
-                Don't have an account?
-                <router-link to="/register" class="text-blue-600 hover:underline">Register</router-link>
-            </p>
+            </div>
         </div>
     </div>
 </template>
