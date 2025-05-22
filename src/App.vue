@@ -1,12 +1,15 @@
 <script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
-import LoginPage from './components/LoginPage.vue'
-import { RouterLink } from 'vue-router'
+// Removed unused imports
 </script>
 
 <template>
   <main>
-    <router-link to="/login">Go to Login</router-link>
+    <nav class="p-4 bg-gray-800">
+      <div class="flex gap-4">
+        <router-link to="/" class="text-blue-400 hover:text-blue-300">Home</router-link>
+        <router-link to="/login" class="text-blue-400 hover:text-blue-300">Login</router-link>
+      </div>
+    </nav>
     <router-view />
   </main>
 </template>
