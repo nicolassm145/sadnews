@@ -14,7 +14,7 @@
         </div>
 
         <!-- Center: Search -->
-        <div class="flex-1 max-w-7xl ">
+        <div class="flex-1 max-w-3/5">
           <div class="relative">
             <input type="search" placeholder="Search..."
               class="w-full px-2 py-2 bg-transparent border-0 border-b border-zinc-700 text-white placeholder-zinc-500 text-sm focus:outline-none focus:border-white transition-colors duration-300" />
