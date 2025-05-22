@@ -1,5 +1,4 @@
 <script setup lang="ts">
-// Removed unused imports and props
 </script>
 
 <template>
@@ -33,13 +32,11 @@
 
                         <div>
                             <div class="flex items-center justify-between">
-                                <label for="password"
-                                    class="block text-sm font-medium text-white font-mono">
+                                <label for="password" class="block text-sm font-medium text-white font-mono">
                                     Password
                                 </label>
                                 <div class="text-sm">
-                                    <a href="#"
-                                        class="font-semibold text-indigo-400 hover:text-indigo-300 font-mono">
+                                    <a href="#" class="font-semibold text-indigo-400 hover:text-indigo-300 font-mono">
                                         Forgot password?
                                     </a>
                                 </div>
@@ -70,9 +67,3 @@
         </div>
     </div>
 </template>
-
-<style scoped>
-.read-the-docs {
-    color: #888;
-}
-</style>
