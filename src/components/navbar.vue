@@ -7,6 +7,9 @@
       <RouterLink to="/login" class="text-blue-400 hover:text-blue-300 transition-colors">
         Login
       </RouterLink>
+      <RouterLink to="/register" class="text-blue-400 hover:text-blue-300 transition-colors">
+        Register
+      </RouterLink>
     </div>
   </nav>
 </template>

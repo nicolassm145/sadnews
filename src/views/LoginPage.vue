@@ -2,66 +2,65 @@
 </script>
 
 <template>
-    <div class="min-h-screen flex flex-col bg-stone-950"> 
+    <div class="min-h-screen flex flex-col bg-black">
         <div class="flex-1 flex items-center justify-center">
-            <div class="w-full max-w-sm lg:max-w-md mx-4 bg-gray-800/90 rounded-xl p-8 shadow-2xl backdrop-blur-sm">
+            <div class="w-full max-w-sm lg:max-w-md mx-4 bg-zinc-900 border border-zinc-800 p-12 shadow-2xl">
                 <div class="sm:mx-auto sm:w-full sm:max-w-sm">
-                    <!-- Simple logo placeholder instead of missing Logo component -->
-                    <div class="text-center mb-4">
-                        <div class="w-12 h-12 bg-indigo-600 rounded-full mx-auto flex items-center justify-center">
-                            <span class="text-white font-bold text-xl">8=D</span>
+                    <!-- Minimalist logo -->
+                    <div class="text-center mb-8">
+                        <div class="w-8 h-8 bg-white mx-auto">
                         </div>
                     </div>
-                    <h2 class="mt-2 text-center text-2xl font-mono font-bold tracking-tight text-white">
-                        Sign in to your account
-                    </h2>
+                    <h1 class="text-center text-xl font-light tracking-[0.2em] text-white uppercase">
+                        Authentication
+                    </h1>
                 </div>
 
-                <div class="mt-10">
-                    <form class="space-y-6">
+                <div class="mt-12">
+                    <form class="space-y-8">
                         <div>
-                            <label for="email" class="block text-sm font-medium text-white font-mono">
-                                Email address
+                            <label for="email"
+                                class="block text-xs font-light text-zinc-300 uppercase tracking-[0.15em] mb-3">
+                                Email Address
                             </label>
-                            <div class="mt-2">
-                                <input id="email" name="email" type="email" required
-                                    class="w-full px-4 py-2 rounded-lg bg-gray-700/50 border border-gray-600 text-white placeholder-gray-400 font-mono"
-                                    autocomplete="email" />
-                            </div>
+                            <input id="email" name="email" type="email" required
+                                class="w-full px-0 py-3 border-0 border-b border-zinc-700 bg-transparent text-white placeholder-zinc-500 focus:outline-none focus:border-white transition-colors duration-300"
+                                autocomplete="email" />
                         </div>
 
                         <div>
-                            <div class="flex items-center justify-between">
-                                <label for="password" class="block text-sm font-medium text-white font-mono">
+                            <div class="flex items-center justify-between mb-3">
+                                <label for="password"
+                                    class="block text-xs font-light text-zinc-300 uppercase tracking-[0.15em]">
                                     Password
                                 </label>
-                                <div class="text-sm">
-                                    <a href="#" class="font-semibold text-indigo-400 hover:text-indigo-300 font-mono">
-                                        Forgot password?
-                                    </a>
-                                </div>
+                                <a href="#"
+                                    class="text-xs text-zinc-400 hover:text-white uppercase tracking-[0.1em] transition-colors duration-200">
+                                    Forgot?
+                                </a>
                             </div>
-                            <div class="mt-2">
-                                <input id="password" name="password" type="password" required
-                                    class="w-full px-4 py-2 rounded-lg bg-gray-700/50 border border-gray-600 text-white placeholder-gray-400 font-mono"
-                                    autocomplete="current-password" />
-                            </div>
+                            <input id="password" name="password" type="password" required
+                                class="w-full px-0 py-3 border-0 border-b border-zinc-700 bg-transparent text-white placeholder-zinc-500 focus:outline-none focus:border-white transition-colors duration-300"
+                                autocomplete="current-password" />
                         </div>
 
-                        <div>
+                        <div class="pt-4">
                             <button type="submit"
-                                class="w-full flex justify-center py-2 px-4 rounded-lg bg-indigo-600 hover:bg-indigo-700 text-white font-semibold transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-                                Sign in
+                                class="w-full py-4 px-8 bg-white text-black text-xs uppercase tracking-[0.2em] font-medium transition-all duration-200 hover:bg-zinc-200 focus:outline-none focus:ring-1 focus:ring-white focus:ring-offset-1 focus:ring-offset-black">
+                                Sign In
                             </button>
                         </div>
                     </form>
 
-                    <p class="mt-8 text-center text-sm text-gray-400 font-mono">
-                        Don't have an account yet?{" "}
-                        <router-link to="/register" class="font-mono text-indigo-400 hover:text-indigo-300">
-                            Sign Up
-                        </router-link>
-                    </p>
+                    <div class="mt-12 pt-8 border-t border-zinc-800">
+                        <p class="text-center text-xs text-zinc-500 uppercase tracking-[0.1em]">
+                            No Account?{" "}
+                            <router-link to="/register"
+                                class="text-white hover:text-zinc-300 transition-colors duration-200 ml-2">
+                                Register
+                            </router-link>
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
