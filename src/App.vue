@@ -4,7 +4,7 @@
 
 <template>
   <main>
-    <nav class="p-40 bg-white ">
+    <nav class="p-4 #171717 bg-neutral-800">
       <div class="flex gap-4">
         <router-link to="/" class="text-blue-400 hover:text-blue-300">Home</router-link>
         <router-link to="/login" class="text-blue-400 hover:text-blue-300">Login</router-link>
