@@ -1,16 +1,16 @@
-import { createWebHistory, createRouter } from 'vue-router'
+import { createWebHistory, createRouter } from "vue-router";
 
-import LoginPage from './views/LoginPage.vue'
-import HelloWorld from './views/HelloWorld.vue'
+import LoginPage from "./views/LoginPage.vue";
+import LandingPage from "./views/LandingPage.vue";
 
 const routes = [
-  { path: '/', component: HelloWorld, props: { msg: 'Hello Vue + Vite!' } },
-  { path: '/login', component: LoginPage },
-]
+  { path: "/", component: LandingPage },
+  { path: "/login", component: LoginPage },
+];
 
 const router = createRouter({
   history: createWebHistory(), // Changed from createMemoryHistory
   routes,
-})
+});
 
-export default router
+export default router;

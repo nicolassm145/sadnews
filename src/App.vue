@@ -3,30 +3,14 @@
 </script>
 
 <template>
-  <main>
-    <nav class="p-40 bg-white ">
+  <main class="min-h-screen flex flex-col">
+    <nav class="p-4 bg-purple-950">
       <div class="flex gap-4">
-        <router-link to="/" class="text-blue-400 hover:text-blue-300">Home</router-link>
-        <router-link to="/login" class="text-blue-400 hover:text-blue-300">Login</router-link>
+        <router-link to="/" class="text-purple-400 hover:text-purple-300">Home</router-link>
+        <router-link to="/login" class="text-purple-400 hover:text-purple-300">Login</router-link>
       </div>
     </nav>
     <router-view />
   </main>
 </template>
 
-<style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
-}
-</style>
