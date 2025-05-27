@@ -9,7 +9,7 @@ const routes = [
   { path: "/", component: LandingPage },
   { path: "/login", component: LoginPage },
   { path: "/register", component: RegisterPage },
-  {path: "/:pathMatch(.*)*", component: NotFound}, // Catch-all route for 404
+  { path: "/:pathMatch(.*)*", component: NotFound }, // Catch-all route for 404
 ];
 
 const router = createRouter({
