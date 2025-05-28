@@ -45,14 +45,14 @@
                 <img src="../assets/falling.png" alt="Falling Figure" class="w-32 h-auto rotate-45 floating-figure" />
             </div>
         </div>
-
     </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 const goBack = () => {
     window.history.back()
 }
+
 </script>
 
 <style scoped>
