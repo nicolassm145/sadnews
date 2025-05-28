@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import PurpleButton from '../components/PurpleButton.vue';
 </script>
 
 <template>
@@ -70,10 +71,7 @@
                         </div>
 
                         <div class="pt-4">
-                            <button type="submit"
-                                class="w-full py-4 px-8 bg-white text-black text-xs uppercase tracking-[0.2em] font-medium transition-all duration-200 hover:bg-zinc-200 focus:outline-none focus:ring-1 focus:ring-white focus:ring-offset-1 focus:ring-offset-black">
-                                Create Account
-                            </button>
+                            <PurpleButton text="Register" class="w-full" />
                         </div>
                     </form>
 

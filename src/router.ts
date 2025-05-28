@@ -6,15 +6,24 @@ import RegisterPage from "./views/RegisterPage.vue";
 import NotFound from "./views/NotFound.vue";
 
 const routes = [
-  { path: "/", component: LandingPage },
-  { path: "/login", component: LoginPage },
-  { path: "/register", component: RegisterPage },
-  { path: "/:pathMatch(.*)*", component: NotFound }, // Catch-all route for 404
-];
+  { path: "/", component: LandingPage, meta: { title: "PurplePen" } },
+  ,
+  { path: "/login", component: LoginPage, meta: { title: "Login" } },
+  { path: "/register", component: RegisterPage, meta: { title: "Register" } },
+  {
+    path: "/:pathMatch(.*)*",
+    component: NotFound,
+    meta: { title: "Page not found" },
+  },
+].filter(Boolean);
 
 const router = createRouter({
-  history: createWebHistory(), // Changed from createMemoryHistory
+  history: createWebHistory(),
   routes,
 });
+
+router.beforeEach((to, from) => {
+  document.title = to.meta?.title ?? 'PurplePen';
+})
 
 export default router;
