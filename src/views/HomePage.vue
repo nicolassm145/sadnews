@@ -1,16 +1,16 @@
 <template>
   <div class="min-h-screen bg-black text-white scroll-smooth">
     <!-- Nav Bar -->
-    <navbar class="fixed top-0 left-0 w-full z-50" />
+    <navbar class="sticky top-0 left-0 w-full z-50" />
 
     <!-- Hero Carousel -->
     <div
-      class="sticky top-0 bg-gradient-to-r from-purple-950/25 via-slate-950 to-purple-950/25 py-4 z-10 h-screen flex items-center">
-      <div class="mx-auto overflow-hidden absolute inset-0" v-if="heroSlides.length > 0">
-        <div class="max-w-7xl mx-auto relative h-full">
+      class="sticky top-0 bg-gradient-to-br from-purple-950 via-gray-900 to-purple-950 py-4 z-10 h-screen flex items-center">
+      <div class="mx-auto overflow-hidden absolute inset-0 py-8" v-if="heroSlides.length > 0">
+        <div class="max-w-7xl mx-auto relative h-11/12">
           <img :src="heroSlides[currentSlide]?.image || '/placeholder-hero.jpg'"
             :alt="heroSlides[currentSlide]?.title || 'News'"
-            class="w-full h-full transition-all duration-700 object-cover" />
+            class="w-full h-full transition-all duration-700 object-cover drop-shadow-lg drop-shadow-neutral-950" />
           <div class="absolute bottom-0 left-0 right-0 p-8 bg-black/65 backdrop-blur-sm">
             <h2 class="text-white text-3xl font-mono uppercase tracking-[0.2em] mb-2">
               {{ heroSlides[currentSlide]?.title || 'Loading...' }}
@@ -39,7 +39,7 @@
         </button>
       </div>
       <!-- Carousel Indicators -->
-      <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex space-x-3" v-if="heroSlides.length > 0">
+      <div class="absolute bottom-30 left-1/2 -translate-x-1/2 flex space-x-3" v-if="heroSlides.length > 0">
         <button v-for="(slide, idx) in heroSlides" :key="slide.id || idx"
           class="w-2 h-2 border border-zinc-600 transition-all duration-300"
           :class="idx === currentSlide ? 'bg-purple-950' : 'bg-transparent hover:bg-zinc-600'"
